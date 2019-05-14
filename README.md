@@ -102,5 +102,37 @@ public class Employee {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
 }
+</pre><br>
+Create DAO interface and implementation class:<br>
+<pre>
+public interface EmployeeDAO {
+	public List<Employee> findAll();
+}
+
+public class EmployeeDAOHibernateImpl implements EmployeeDAO{
+	
+	private EntityManager entityManager;
+	
+	//constructor injection
+	@Autowired
+	public EmployeeDAOHibernateImpl(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+	@Override
+	@Transactional
+	public List<Employee> findAll() {
+		// get the current hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		// create query
+		Query<Employee> query = currentSession.createQuery("from Employee", Employee.class);
+		
+		// get the result by executing query
+		List<Employee> employees = query.getResultList();
+		
+		return employees;
+	}
+}
 </pre>
+
 
