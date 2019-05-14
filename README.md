@@ -22,7 +22,7 @@ create table employee (
 <h2>Integrating Hibernate and JPA</h2>
 Spring Boot configures datasource automaticly based on pom.xml(Session Factory needs datasource and Session Factory will be used from DAO)<br>
 That means Datasource, EntityManager will be configured automatically 
-<h3>What is JPA<h3>
+<h3>What is JPA</h3>
 JPA - Java Persistence API. Standart API for ORM. It defines only the specification (interface) but not the implementation<br>
 Hibernate is one the technologies that implements those specifications of JPA<br>
 Using of Standatr API as JPA gives us the flexibility. We may not go to the details of the vendors such as Hibernate<br> 
@@ -33,3 +33,6 @@ spring.datasource.url=jdbc:mysql://localhost:3306/employee_directory
 spring.datasource.username=sbstudent
 spring.datasource.password=sbstudent
 </pre>
+Then create employee class and map it to db table <br>
+
+
