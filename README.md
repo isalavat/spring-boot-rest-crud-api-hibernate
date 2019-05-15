@@ -1,8 +1,9 @@
 # spring-boot-rest-crud-api-hibernate
-#<b>Soruce - Spring Hibernate Tutorial on Udemy. Author Chad Derby</b>
+#<h1>Soruce - Spring Hibernate Tutorial on Udemy. Author - Chad Derby</h1>
 <h1>Spring Boot - Build REST CRUD API with Hibernate</h1>
 Create Database with employee table:<br>
 <pre>
+#TODO create database employee_directory
 use employee_directory;
 create table employee (
 	id int not null auto_increment,
@@ -30,9 +31,10 @@ Using of Standatr API as JPA gives us the flexibility. We may not go to the deta
 EntityManager is similar to SessionFactory of Hibernate, but it wrapps the SessionFactory. EntityManager will be used in DAO to access the DB<br>
 You need to configure following properties:<br>
 <pre>
-spring.datasource.url=jdbc:mysql://localhost:3306/employee_directory
-spring.datasource.username=sbstudent
-spring.datasource.password=sbstudent
+#JDBC properties
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_directory?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.username=hbstudent
+spring.datasource.password=hbstudent
 </pre>
 Then create employee class and map it to db table: <br>
 <pre>
