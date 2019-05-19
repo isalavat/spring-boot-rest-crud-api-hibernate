@@ -1,5 +1,6 @@
-<h3>This project was developed as an example following the lessons of the Spring Framework and Hibernate Course of Chad Darby on Udemy (Spring & Hibernate for Beginners (Includes Spring Boot))<h3> <hr>
 # spring-boot-rest-crud-api-hibernate
+<h3>This project was developed as an example following the lessons of the Spring Framework and Hibernate Course of Chad Darby on Udemy (Spring & Hibernate for Beginners (Includes Spring Boot))<h3> <hr>
+
 <h1>Spring Boot - Build REST CRUD API with Hibernate</h1>
 Create Database with employee table:<br>
 <pre>
